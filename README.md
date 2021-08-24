@@ -1,1 +1,1 @@
-# Udacity Tech Trends Project
+# Simple Tech Trends Website

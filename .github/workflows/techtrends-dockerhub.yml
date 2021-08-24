@@ -1,4 +1,4 @@
-name: Docker Build and Push CI Pipeline
+name: TechTrends - Package with Docker
 
 on:
   push:
