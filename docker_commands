@@ -1,0 +1,74 @@
+## Docker commands used to build the application
+docker build ./project -t techtrends
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+docker ps
+## Get the running container id from the above command
+docker logs <container_id>
+
+## Logs from the container running the TechTrends application
+  * Serving Flask app 'app' (lazy loading)
+  * Environment: production
+    WARNING: This is a development server. Do not use it in a production deployment.
+    Use a production WSGI server instead.
+  * Debug mode: off
+ 2021-08-24 12:23:14,142 WARNING   * Running on all addresses.
+    WARNING: This is a development server. Do not use it in a production deployment.
+ 2021-08-24 12:23:14,142 INFO      * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+ 2021-08-24 12:23:18,106 INFO     172.17.0.1 - - [24/Aug/2021 12:23:18] "GET / HTTP/1.1" 200 -
+ 2021-08-24 12:23:18,170 INFO     172.17.0.1 - - [24/Aug/2021 12:23:18] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 12:23:19,445 INFO     Article "2020 CNCF Annual Report" retrieved!
+ 2021-08-24 12:23:19,449 INFO     172.17.0.1 - - [24/Aug/2021 12:23:19] "GET /1 HTTP/1.1" 200 -
+ 2021-08-24 12:23:19,493 INFO     172.17.0.1 - - [24/Aug/2021 12:23:19] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 12:23:20,438 INFO     172.17.0.1 - - [24/Aug/2021 12:23:20] "GET /create HTTP/1.1" 200 -
+ 2021-08-24 12:23:20,492 INFO     172.17.0.1 - - [24/Aug/2021 12:23:20] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 12:23:21,039 INFO     The "About Us" page is retrieved
+ 2021-08-24 12:23:21,042 INFO     172.17.0.1 - - [24/Aug/2021 12:23:21] "GET /about HTTP/1.1" 200 -
+ 2021-08-24 12:23:21,096 INFO     172.17.0.1 - - [24/Aug/2021 12:23:21] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:15:28,581 INFO     172.17.0.1 - - [24/Aug/2021 13:15:28] "GET / HTTP/1.1" 200 -
+ 2021-08-24 13:15:28,709 INFO     172.17.0.1 - - [24/Aug/2021 13:15:28] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:15:57,968 INFO     172.17.0.1 - - [24/Aug/2021 13:15:57] "GET / HTTP/1.1" 200 -
+ 2021-08-24 13:15:57,988 INFO     172.17.0.1 - - [24/Aug/2021 13:15:57] "GET /static/css/main.css HTTP/1.1" 200 -
+ 2021-08-24 13:15:58,091 INFO     172.17.0.1 - - [24/Aug/2021 13:15:58] "GET /favicon.ico HTTP/1.1" 404 -
+ 2021-08-24 13:16:23,819 INFO     The "About Us" page is retrieved
+ 2021-08-24 13:16:23,820 INFO     172.17.0.1 - - [24/Aug/2021 13:16:23] "GET /about HTTP/1.1" 200 -
+ 2021-08-24 13:16:23,836 INFO     172.17.0.1 - - [24/Aug/2021 13:16:23] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:23,874 INFO     172.17.0.1 - - [24/Aug/2021 13:16:23] "GET /favicon.ico HTTP/1.1" 404 -
+ 2021-08-24 13:16:35,914 INFO     172.17.0.1 - - [24/Aug/2021 13:16:35] "GET / HTTP/1.1" 200 -
+ 2021-08-24 13:16:35,920 INFO     172.17.0.1 - - [24/Aug/2021 13:16:35] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:35,931 INFO     172.17.0.1 - - [24/Aug/2021 13:16:35] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:37,144 INFO     Article "2020 CNCF Annual Report" retrieved!
+ 2021-08-24 13:16:37,144 INFO     172.17.0.1 - - [24/Aug/2021 13:16:37] "GET /1 HTTP/1.1" 200 -
+ 2021-08-24 13:16:37,160 INFO     172.17.0.1 - - [24/Aug/2021 13:16:37] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:37,180 INFO     172.17.0.1 - - [24/Aug/2021 13:16:37] "GET /favicon.ico HTTP/1.1" 404 -
+ 2021-08-24 13:16:38,316 INFO     172.17.0.1 - - [24/Aug/2021 13:16:38] "GET / HTTP/1.1" 200 -
+ 2021-08-24 13:16:38,323 INFO     172.17.0.1 - - [24/Aug/2021 13:16:38] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:38,334 INFO     172.17.0.1 - - [24/Aug/2021 13:16:38] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:40,276 INFO     Article "CNCF Cloud Native Interactive Landscape" retrieved!
+ 2021-08-24 13:16:40,276 INFO     172.17.0.1 - - [24/Aug/2021 13:16:40] "GET /4 HTTP/1.1" 200 -
+ 2021-08-24 13:16:40,295 INFO     172.17.0.1 - - [24/Aug/2021 13:16:40] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:40,315 INFO     172.17.0.1 - - [24/Aug/2021 13:16:40] "GET /favicon.ico HTTP/1.1" 404 -
+ 2021-08-24 13:16:45,454 INFO     172.17.0.1 - - [24/Aug/2021 13:16:45] "GET / HTTP/1.1" 200 -
+ 2021-08-24 13:16:45,460 INFO     172.17.0.1 - - [24/Aug/2021 13:16:45] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:45,469 INFO     172.17.0.1 - - [24/Aug/2021 13:16:45] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:49,361 INFO     Article "KubeCon + CloudNativeCon 2021" retrieved!
+ 2021-08-24 13:16:49,362 INFO     172.17.0.1 - - [24/Aug/2021 13:16:49] "GET /2 HTTP/1.1" 200 -
+ 2021-08-24 13:16:49,371 INFO     172.17.0.1 - - [24/Aug/2021 13:16:49] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:49,403 INFO     172.17.0.1 - - [24/Aug/2021 13:16:49] "GET /favicon.ico HTTP/1.1" 404 -
+ 2021-08-24 13:16:53,397 INFO     172.17.0.1 - - [24/Aug/2021 13:16:53] "GET /create HTTP/1.1" 200 -
+ 2021-08-24 13:16:53,417 INFO     172.17.0.1 - - [24/Aug/2021 13:16:53] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:16:53,484 INFO     172.17.0.1 - - [24/Aug/2021 13:16:53] "GET /favicon.ico HTTP/1.1" 404 -
+ 2021-08-24 13:17:36,048 INFO     New Article "Deployment using Docker" created!
+ 2021-08-24 13:17:36,049 INFO     172.17.0.1 - - [24/Aug/2021 13:17:36] "POST /create HTTP/1.1" 302 -
+ 2021-08-24 13:17:36,059 INFO     172.17.0.1 - - [24/Aug/2021 13:17:36] "GET / HTTP/1.1" 200 -
+ 2021-08-24 13:17:36,073 INFO     172.17.0.1 - - [24/Aug/2021 13:17:36] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:17:45,661 INFO     Article "Deployment using Docker" retrieved!
+ 2021-08-24 13:17:45,662 INFO     172.17.0.1 - - [24/Aug/2021 13:17:45] "GET /7 HTTP/1.1" 200 -
+ 2021-08-24 13:17:45,676 INFO     172.17.0.1 - - [24/Aug/2021 13:17:45] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:17:45,700 INFO     172.17.0.1 - - [24/Aug/2021 13:17:45] "GET /favicon.ico HTTP/1.1" 404 -
+ 2021-08-24 13:22:21,697 INFO     172.17.0.1 - - [24/Aug/2021 13:22:21] "GET / HTTP/1.1" 200 -
+ 2021-08-24 13:22:21,706 INFO     172.17.0.1 - - [24/Aug/2021 13:22:21] "GET /static/css/main.css HTTP/1.1" 304 -
+ 2021-08-24 13:22:21,742 INFO     172.17.0.1 - - [24/Aug/2021 13:22:21] "GET /static/css/main.css HTTP/1.1" 304 -
