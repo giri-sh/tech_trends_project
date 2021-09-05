@@ -51,7 +51,7 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-        app.logger.info('Error! Post ID: ' + post_id + ' does not exist')
+        app.logger.info(f'Error! Post ID: {post_id} does not exist')
         return render_template('404.html'), 404
     else:
         app.logger.info('Article "' + post['title'] + '" retrieved!')
@@ -101,8 +101,11 @@ def metrics():
     return jsonify(db_connection_count=connection_counter, post_count=posts_count[0])
 
 
-# start the application on port 3111
+# Start the application on port 3111
 if __name__ == "__main__":
-    # stream logs to a file
-    logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',level=logging.DEBUG)
+    # Logger config
+    stdout_handler = logging.StreamHandler()
+    stderr_handler = logging.StreamHandler()
+    logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',level=logging.DEBUG, 
+    handlers=[stderr_handler, stdout_handler])
     app.run(host='0.0.0.0', port='3111', debug=True)
